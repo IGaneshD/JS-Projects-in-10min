@@ -3,31 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Counter</title>
+    <title>Character Counter - the code school</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div class="container">
+        <h1>CHARACTER COUNTER</h1>
 
-        <h1>COUNT CHARACTERS</h1>
-        
-        <textarea name="" id="textBox" cols="" rows="" oninput="countChars()" placeholder="Enter Your Text Here . . .
-        "></textarea>
-        <p class="characters" >Characters<span id="count">0</span></p>
-        
+        <textarea  id="textBox" oninput="countChars()" placeholder="Enter Your Text Here . . ."></textarea>
+
+        <p class="characters"><span>Characters</span><span id="count">0</span></p>
     </div>
 
 </body>
+
 <script>
-    
-    let inputBox = document.getElementById("textBox");
-    let count = document.getElementById("count");
+    let inputBox = document.getElementById("textBox")
+    let count = document.getElementById("count")
 
     function countChars(){
         inputBox.style.height = "auto";
         inputBox.style.height = `${inputBox.scrollHeight}px`
-        count.textContent = `${inputBox.value.length}`;
+        count.textContent = inputBox.value.length
     }
 </script>
 </html>
